@@ -7,7 +7,7 @@ export function AccountSettingsScreen() {
     <div className="flex flex-col flex-1">
       {/* White top section — header + profile + description */}
       <div className="bg-white">
-        <div className="px-6 py-5 border-b border-app-border">
+        <div className="px-6 py-5 ">
           <h1 className="text-input-label font-medium text-app-text font-rubik">
             Account Settings
           </h1>

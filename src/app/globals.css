@@ -83,21 +83,16 @@
 /* Reusable button components */
 @layer components {
   .btn-primary {
-    @apply w-full font-medium font-rubik text-center text-white tracking-normal transition-opacity hover:opacity-90;
+    @apply w-full font-medium font-rubik text-center text-white bg-brand tracking-normal transition-opacity hover:opacity-90;
     height: 46px;
     border-radius: 6px;
-    background: #6C25FF;
     font-size: 1rem;
-    line-height: 17px;
   }
   .btn-secondary {
-    @apply w-full font-medium font-rubik text-center tracking-normal transition-opacity hover:opacity-80;
+    @apply w-full font-medium font-rubik text-center text-app-text bg-brand-soft tracking-normal transition-opacity hover:opacity-80;
     height: 46px;
     border-radius: 6px;
-    background: #6C25FF4B;
-    color: #1D2226;
     font-size: 1rem;
-    line-height: 17px;
   }
 }
 

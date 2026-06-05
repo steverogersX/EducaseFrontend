@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { FloatingInput } from "@/components/FloatingInput";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 interface CreateAccountScreenProps {
   onCreateAccount: () => void;
@@ -71,39 +72,26 @@ export function CreateAccountScreen({ onCreateAccount }: CreateAccountScreenProp
           <p className="text-input-label text-app-text font-rubik">
             Are you an Agency?<span className="text-app-error"> *</span>
           </p>
-          <div className="flex items-center gap-6">
+          <RadioGroup
+            value={isAgency}
+            onValueChange={(val) => setIsAgency(val as "yes" | "no")}
+            className="flex flex-row gap-6"
+          >
             <label className="flex items-center gap-2 cursor-pointer">
-              <div
-                onClick={() => setIsAgency("yes")}
-                className={`w-5 h-5 rounded-full border-2 flex items-center justify-center cursor-pointer transition-colors ${
-                  isAgency === "yes"
-                    ? "border-brand bg-brand"
-                    : "border-app-border bg-white"
-                }`}
-              >
-                {isAgency === "yes" && (
-                  <div className="w-2 h-2 rounded-full bg-white" />
-                )}
-              </div>
+              <RadioGroupItem
+                value="yes"
+                className="size-5 border-app-border data-checked:border-brand data-checked:bg-brand"
+              />
               <span className="text-input-label text-app-text font-rubik">Yes</span>
             </label>
-
             <label className="flex items-center gap-2 cursor-pointer">
-              <div
-                onClick={() => setIsAgency("no")}
-                className={`w-5 h-5 rounded-full border-2 flex items-center justify-center cursor-pointer transition-colors ${
-                  isAgency === "no"
-                    ? "border-brand bg-brand"
-                    : "border-app-border bg-white"
-                }`}
-              >
-                {isAgency === "no" && (
-                  <div className="w-2 h-2 rounded-full bg-white" />
-                )}
-              </div>
+              <RadioGroupItem
+                value="no"
+                className="size-5 border-app-border data-checked:border-brand data-checked:bg-brand"
+              />
               <span className="text-input-label text-app-text font-rubik">No</span>
             </label>
-          </div>
+          </RadioGroup>
         </div>
       </div>
 
