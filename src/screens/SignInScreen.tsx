@@ -17,7 +17,7 @@ export function SignInScreen({ onLogin }: SignInScreenProps) {
         <h1 className="text-heading font-medium text-app-text font-rubik leading-tight">
           Signin to your<br />PopX account
         </h1>
-        <p className="text-input-label text-app-placeholder font-rubik leading-relaxed">
+        <p className="text-body-md text-app-placeholder font-rubik leading-relaxed">
           Lorem ipsum dolor sit amet,<br />consectetur adipiscing elit,
         </p>
       </div>
