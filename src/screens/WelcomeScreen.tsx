@@ -5,7 +5,7 @@ interface WelcomeScreenProps {
 
 export function WelcomeScreen({ onCreateAccount, onLogin }: WelcomeScreenProps) {
   return (
-    <div className="flex flex-col flex-1 bg-app-bg">
+    <div className="flex flex-col flex-1 bg-[#F7F8F9]">
       {/* Large empty space fills the top */}
       <div className="flex-1" />
 

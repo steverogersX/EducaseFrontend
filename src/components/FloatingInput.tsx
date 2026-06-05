@@ -28,7 +28,7 @@ export function FloatingInput({
   const floated = focused || value.length > 0;
 
   return (
-    <div className={cn("relative", className)}>
+    <div className={cn("relative mt-2", className)}>
       <input
         id={id}
         type={type}
@@ -38,7 +38,7 @@ export function FloatingInput({
         onBlur={() => setFocused(false)}
         placeholder={floated ? (placeholder ?? "") : ""}
         className={cn(
-          "w-full h-input rounded-input border bg-white font-rubik text-input-label text-app-text",
+          "w-full h-input rounded-input border bg-transparent font-rubik text-input-label text-app-text",
           "px-3 outline-none transition-colors duration-150",
           "placeholder:text-app-placeholder",
           focused ? "border-brand" : "border-app-border"
@@ -49,12 +49,12 @@ export function FloatingInput({
         className={cn(
           "pointer-events-none absolute left-3 font-rubik transition-all duration-150",
           floated
-            ? "top-0 -translate-y-1/2 text-floating-label text-brand bg-white px-1"
+            ? "top-0 -translate-y-1/2 text-floating-label text-brand bg-app-bg px-1"
             : "top-1/2 -translate-y-1/2 text-input-label text-app-placeholder"
         )}
       >
         {label}
-        {required && <span className="text-brand ml-0.5">*</span>}
+        {required && <span className="text-app-error ml-0.5">*</span>}
       </label>
     </div>
   );
