@@ -61,6 +61,16 @@
   --color-outer: #E5E7EB;
 }
 
+/* Slide-in animation for screen transitions (right → left) */
+@keyframes slide-in {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+
+@theme {
+  --animate-slide-in: slide-in 0.3s ease-out both;
+}
+
 /* PopX sizing utilities — defined explicitly since non-standard sizes */
 @layer utilities {
   .w-frame { width: 375px; }
